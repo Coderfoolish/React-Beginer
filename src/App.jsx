@@ -6,14 +6,20 @@ const App = () => {
 
   const tandao = "duy tan"
   const age = 23
-  
+
+  const addNewTodo = (name) => {
+    alert(`call me ${name}`)
+  }
   return (
     <div className="todo-container">
       <div className="todo-title ">Todo list</div>
-      <TodoNew/>
+      <TodoNew
+       addNewTodo = {addNewTodo} 
+       />
       <TodoData
       name = {tandao}
-      age = {age} />
+      age = {age} 
+       />
       <div className='todo-image'>
         <img src={ReactLogo} className='logo'/>
       </div>
